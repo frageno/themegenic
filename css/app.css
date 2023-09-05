@@ -555,6 +555,9 @@ video {
 .mt-4{
     margin-top: 1rem
 }
+.block{
+    display: block
+}
 .inline-block{
     display: inline-block
 }
@@ -627,12 +630,19 @@ video {
 .border-b{
     border-bottom-width: 1px
 }
+.border-none{
+    border-style: none
+}
 .border-primary{
     --tw-border-opacity: 1;
     border-color: rgb(14 165 233 / var(--tw-border-opacity))
 }
 .border-transparent{
     border-color: transparent
+}
+.border-gray-800{
+    --tw-border-opacity: 1;
+    border-color: rgb(31 41 55 / var(--tw-border-opacity))
 }
 .bg-gray-100{
     --tw-bg-opacity: 1;
@@ -657,6 +667,17 @@ video {
 .bg-white{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+.bg-transparent{
+    background-color: transparent
+}
+.bg-gray-800{
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity))
+}
+.bg-gray-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity))
 }
 .bg-gradient-to-r{
     background-image: linear-gradient(to right, var(--tw-gradient-stops))
@@ -689,6 +710,9 @@ video {
 }
 .p-4{
     padding: 1rem
+}
+.p-5{
+    padding: 1.25rem
 }
 .px-12{
     padding-left: 3rem;
@@ -827,8 +851,16 @@ video {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms
 }
+.transition-all{
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
 .duration-200{
     transition-duration: 200ms
+}
+.duration-300{
+    transition-duration: 300ms
 }
 .alignfull{
     margin: 2rem calc(50% - 50vw) !important;
@@ -917,6 +949,18 @@ article > *:not(.entry-content),
 .entry-content ol li, .block-editor-block-list__layout ol li{
     list-style-position: inside;
     list-style-type: decimal
+}
+.hover\:bg-gray-900:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity))
+}
+.hover\:text-white:hover{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+.hover\:text-gray-800:hover{
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity))
 }
 .focus\:outline-none:focus{
     outline: 2px solid transparent;

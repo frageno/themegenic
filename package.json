@@ -1,15 +1,9 @@
 {
-	"name": "tailpress",
-	"version": "3.3.0",
-	"description": "Boilerplate WordPress theme with Tailwind CSS.",
-	"author": "Jeffrey van Rossum",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jeffreyvr/tailpress"
-	},
-	"theme_uri": "https://github.com/jeffreyvr/tailpress",
-	"author_uri": "https://vanrossum.dev",
-	"text_domain": "tailpress",
+	"name": "themegenic",
+	"version": "0.1.0",
+	"description": "Theme Genic WordPress theme with Tailwind CSS.",
+	"author": "frageno",
+	"text_domain": "themegenic",
 	"license": "MIT",
 	"scripts": {
 		"dev": "mix",

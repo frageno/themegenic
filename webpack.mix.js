@@ -18,6 +18,8 @@ mix.postCss("resources/css/app.css", "css");
 
 mix.postCss("resources/css/editor-style.css", "css");
 
+mix.postCss("resources/css/admin-style.css", "css");
+
 // mix.browserSync({
 //     proxy: 'http://tailpress.test',
 //     host: 'tailpress.test',

@@ -38,8 +38,8 @@ All notable changes to TailPress will be documented in this file.
 - Switching to Tailwind CLI and esbuild instead of LaraveL Mix.
 - Removing `theme` subdirectory setup as it is no longer needed with the new build setup.
 - Removing `TailPress` class and it's functions (`tailpress()->get_header()` etc.) throughout the theme.
-- New `tailpress_asset` function to get the URL of an asset (previously `tailpress_mix`).
-- `tailpress_asset` function thaty appends a `time` parameter if [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) does not return `production` for cache busting (instead of the previously used versioned assets through `mix-manifest.json`).
+- New `themegenic_asset` function to get the URL of an asset (previously `themegenic_mix`).
+- `themegenic_asset` function thaty appends a `time` parameter if [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) does not return `production` for cache busting (instead of the previously used versioned assets through `mix-manifest.json`).
 - Update screenshot.png.
 - Remove `block-editor.css`, only use `editor-style.css`.
 - Moving `editor-style.css` from root to `css` directory.
