@@ -68,21 +68,17 @@
 		</div>
 	</header>
 
-	<div id="content" class="flex-grow site-content">
+	<div id="content" class="flex-grow site-content" style="background:<?php echo DEFAULT_BACKGROUND_COLOR ? DEFAULT_BACKGROUND_COLOR : '#FFFFFF'; ?>; color:<?php echo DEFAULT_TEXT_COLOR ? DEFAULT_TEXT_COLOR : '#000000'; ?>">
 
 		<?php if ( is_front_page() ) { ?>
 			<!-- Start introduction -->
 			<div class="container mx-auto">
 				<div class="px-12 py-16 my-12 rounded-xl bg-gradient-to-r from-blue-50 from-10% via-sky-100 via-30% to-blue-200 to-90%">
                     <div class="max-w-screen-md mx-auto">
-                        <h1 class="mb-6 text-3xl font-extrabold tracking-tight text-gray-800 lg:text-6xl">Start building your next <a href="https://tailwindcss.com" class="text-secondary">Tailwind CSS</a> flavoured WordPress theme
-                            with <a href="https://tailpress.io" class="text-primary">ThemeGenic</a>.</h1>
-                        <p class="mb-10 text-xl font-medium text-gray-600">TailPress is your go-to starting
-                            point for developing WordPress themes with Tailwind CSS and comes with basic block-editor support out
-                            of the box.</p>
+                        <h1 class="mb-6 text-3xl font-extrabold tracking-tight text-gray-800 lg:text-6xl">Innovative web design and development for your <span class="text-primary">business.</span></h1>
+                        <p class="mb-10 text-xl font-medium text-gray-600">With years of experience in web design and development, we have the skills and knowledge needed to create a website that reflects your brand identity and appeals to your target audience. We use the latest technologies and design trends to ensure that your website is modern, professional, and innovative.</p>
                         <a href="https://github.com/jeffreyvr/tailpress"
-                            class="flex-none w-full px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 bg-gray-900 border border-transparent sm:w-auto rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">View
-                            on GitHub</a>
+                            class="flex-none w-full px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 bg-gray-900 border border-transparent sm:w-auto rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">Contact Me</a>
                     </div>
                 </div>
 			</div>

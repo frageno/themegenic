@@ -1,5 +1,6 @@
 <?php
-require_once(get_stylesheet_directory(  ) . '/functions/helpers/admin_options.php');
+
+// require_once(get_stylesheet_directory(  ) . '/functions/helpers/admin_options.php');
 /**
  * Register custom theme options in admin dashboard
  */
@@ -69,21 +70,25 @@ function theme_options_page_html() {
         <div class="header">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
             <nav class="nav-tab-wrapper">
-                <a href="?page=theme_options" class="nav-tab <?php echo ($current_tab === 'theme_options') ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Dashborad', 'themegenic'); ?></a>
+                <a href="?page=theme_options" class="nav-tab <?php echo ($current_tab === 'theme_options') ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('General', 'themegenic'); ?></a>
                 <a href="?page=theme_options_logo" class="nav-tab <?php echo ($current_tab === 'theme_options_logo') ? 'nav-tab-active' : ''; ?>">Logo</a>
                 <a href="?page=theme_options_layout" class="nav-tab <?php echo ($current_tab === 'theme_options_layout') ? 'nav-tab-active' : ''; ?>">Site Layout</a>
                 <a href="?page=theme_options_footer" class="nav-tab <?php echo ($current_tab === 'theme_options_footer') ? 'nav-tab-active' : ''; ?>">Footer</a>
             </nav>
         </div>
+
         <!-- end of header -->
-        <form action="options.php" method="post">
-            <?php
-                // Update this line to use the current tab's settings group
-                settings_fields($current_tab . '_group');
-                do_settings_sections($current_tab);
-                submit_button('Save Settings');
-            ?>
-        </form>
+        <!-- options -->
+        <div class="options">
+            <form action="options.php" method="post">
+                <?php
+                    // Update this line to use the current tab's settings group
+                    settings_fields($current_tab . '_group');
+                    do_settings_sections($current_tab);
+                    submit_button('Save Settings');
+                ?>
+            </form>
+        </div>
     </div>
     <?php
 }
@@ -98,7 +103,17 @@ function themegenic_register_settings() {
 
     add_settings_section( 'themegenic_options_section', false, false, 'theme_options' );
 
-    add_settings_field( 'themegenic_option_1', esc_html__( 'Theme Option', 'themegenic' ), 'render_theme_options', 'theme_options', 'themegenic_options_section', ['label_for' => 'theme_options'] );
+    add_settings_field( 'themegenic_default_background_color',
+                        esc_html__( 'Default Background Color', 'themegenic' ),
+                        'render_theme_options', 'theme_options',
+                        'themegenic_options_section',
+                        ['label_for' => 'theme_background_color'] );
+                        
+    add_settings_field( 'themegenic_default_text_color',
+                        esc_html__( 'Default Text Color', 'themegenic' ),
+                        'render_theme_options', 'theme_options',
+                        'themegenic_options_section',
+                        ['label_for' => 'theme_text_color'] );
 }
 
 add_action('admin_init', 'themegenic_register_settings');
@@ -110,11 +125,17 @@ add_action('admin_init', 'themegenic_register_settings');
  function render_theme_options($args) {
     $value = get_option( 'theme_options')[$args['label_for']] ?? ''; 
     ?>
-
-    <input type="text"
-           name="theme_options[<?php echo esc_attr($args['label_for']); ?>]"
-           id="<?php echo esc_attr($args['label_for']); ?>"
-           value="<?php echo esc_attr($value); ?>">
+        <input type="text"
+               name="theme_options[<?php echo esc_attr($args['label_for']); ?>]"
+               id="<?php echo esc_attr($args['label_for']); ?>"
+               value="<?php echo esc_attr($value); ?>"
+               class="color-field">
+    <script>
+        jQuery(document).ready(function($) {
+        // Initialize the color picker
+        $('.color-field').wpColorPicker();
+        });
+    </script>
     <?php
  }
 

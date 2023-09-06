@@ -53,9 +53,14 @@ add_action( 'wp_enqueue_scripts', 'themegenic_enqueue_scripts' );
 
  function enqueue_admin_styles() {
     wp_enqueue_style('admin-styles', get_template_directory_uri() . '/css/admin-style.css');
+	
+    // Enqueue the styles and scripts for the color picker.
+	wp_enqueue_script('wp-color-picker');
+    wp_enqueue_style('wp-color-picker');
 }
 
 add_action('admin_enqueue_scripts', 'enqueue_admin_styles');
+
 
 
 /**
@@ -121,7 +126,8 @@ add_filter( 'nav_menu_submenu_css_class', 'themegenic_nav_menu_add_submenu_class
 
 
 /**
- * Add options page to admin dashboard to customize theme
+ * Add functions helpers and options
  */
 
-require locate_template('/functions/index.php');
+require locate_template('/inc/index.php');
+
