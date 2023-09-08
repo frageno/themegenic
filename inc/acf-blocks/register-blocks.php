@@ -9,7 +9,7 @@ function themegenic_register_acf_blocks() {
         acf_register_block_type(array(
             'name'              => 'header_intro',
             'title'             => __('Header Intro'),
-            'render_template'   => '/template-parts/blocks/header_intro/index.php',
+            'render_template'   => '/template-parts/blocks/HeaderIntro/index.php',
         ));
     }
 
