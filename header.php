@@ -5,8 +5,24 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<?php 
+		wp_head();
 
-	<?php wp_head(); ?>
+		// theme options
+		$logo = get_field('logo', 'option');
+		$favicon = get_field('favicon', 'option');
+		$font_family = get_field('font_family', 'option');
+		$body_font_size = get_field('body_font_size', 'option');
+	?>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=<?php echo $font_family ? $font_family : 'Poppins'?>:wght@400;500;600;700;800;900" rel="stylesheet">
+	<style>
+		body { font-family: '<?php echo $font_family ? $font_family : 'Poppins'; ?>'; font-size: <?php echo $body_font_size ? $body_font_size : 16 ?>px; }
+	</style>
+	<?php if($favicon) { ?>
+		<link rel="icon" type="image/png" href="<?php echo $favicon; ?>">
+	<?php } ?>
 </head>
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
@@ -22,10 +38,13 @@
 		<div class="max-w-screen-xl px-5 mx-auto">
 			<div class="py-6 border-b lg:flex lg:justify-between lg:items-center">
 				<div class="flex items-center justify-between">
-					<div>
-						<?php if ( has_custom_logo() ) { ?>
-                            <?php the_custom_logo(); ?>
-						<?php } else { ?>
+					<div class="logo">
+						<?php if ( has_custom_logo() ) { 
+                            the_custom_logo();
+							echo 'das';
+						} elseif ($logo) { 
+							echo wp_get_attachment_image( $logo['ID'], 'large', false, array('class' => ''));
+						} else { ?>
 							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="text-lg font-extrabold uppercase">
 								<?php echo get_bloginfo( 'name' ); ?>
 							</a>
