@@ -13,19 +13,19 @@
 		$logo = get_field('logo', 'option');
 		$favicon = get_field('favicon', 'option');
 		$font_family = get_field('font_family', 'option');
-		$body_font_size = get_field('body_font_size', 'option');
 	?>
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=<?php echo $font_family ? $font_family : 'Poppins'?>:wght@400;500;600;700;800;900" rel="stylesheet">
-	<style>
-		body { font-family: '<?php echo $font_family ? $font_family : 'Poppins'; ?>'; font-size: <?php echo $body_font_size ? $body_font_size : 16 ?>px; }
-	</style>
+	
+	<?php if($font_family){ ?>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=<?php echo $font_family; ?>:wght@400;500;600;700;800;900" rel="stylesheet">
+	<?php } ?>
+
 	<?php if($favicon) { ?>
 		<link rel="icon" type="image/png" href="<?php echo $favicon; ?>">
 	<?php } ?>
 </head>
 
-<body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
+<body <?php body_class( 'bg-white text-gray-900 antialiased text-body font-primary' ); ?>>
 
 <?php do_action( 'themegenic_site_before' ); ?>
 
@@ -87,7 +87,7 @@
 		</div>
 	</header>
 
-	<div id="content" class="flex-grow site-content" style="background:<?php echo DEFAULT_BACKGROUND_COLOR ? DEFAULT_BACKGROUND_COLOR : '#FFFFFF'; ?>; color:<?php echo DEFAULT_TEXT_COLOR ? DEFAULT_TEXT_COLOR : '#000000'; ?>">
+	<div id="content" class="flex-grow site-content">
 
 		<?php do_action( 'themegenic_content_start' ); ?>
 
