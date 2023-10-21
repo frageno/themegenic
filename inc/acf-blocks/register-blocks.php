@@ -7,6 +7,12 @@ function themegenic_register_acf_blocks() {
 
     if( function_exists('acf_register_block_type') ){
         acf_register_block_type(array(
+            'name'              => 'teaser_cards',
+            'title'             => __('Teaser Cards'),
+            'render_template'   => '/template-parts/blocks/TeaserCards/index.php',
+        ));
+
+        acf_register_block_type(array(
             'name'              => 'header_intro',
             'title'             => __('Header Intro'),
             'render_template'   => '/template-parts/blocks/HeaderIntro/index.php',

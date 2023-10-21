@@ -16,7 +16,7 @@
  ?>
 
 
- <div id="<?php echo esc_attr($id); ?>" class="relative ">
+ <section id="<?php echo esc_attr($id); ?>" class="relative ">
 	<div class="max-w-screen-xl px-5 py-32 mx-auto rounded-xl">
         <div class="max-w-screen-md mx-auto text-center">
             <?php if($headline): ?>
@@ -52,4 +52,4 @@
 
         </div>
     </div>
-</div>
+</section>
