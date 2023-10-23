@@ -689,15 +689,8 @@ video {
 .gap-5{
     gap: 1.25rem
 }
-.gap-\[50px\]{
-    gap: 50px
-}
 .gap-md{
     gap: 40px
-}
-.gap-x-\[50px\]{
-    -moz-column-gap: 50px;
-         column-gap: 50px
 }
 .gap-y-xs{
     row-gap: 20px

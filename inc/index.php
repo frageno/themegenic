@@ -11,6 +11,8 @@
  */
 
 require locate_template('/inc/helpers/helpers.php');
+require locate_template('/inc/helpers/load-modules.php');
+require locate_template('/inc/helpers/save-json.php');
 
 /**
  * ACF Register blocks
