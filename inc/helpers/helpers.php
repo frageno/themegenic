@@ -34,7 +34,7 @@ function enqueue_theme_genic_colors()
     $secondary_color = get_field('secondary_color', 'option');
     $body_text_color = get_field('body_text_color', 'option');
     $font_family = get_field('font_family', 'option');
-	$body_font_size = get_field('body_font_size', 'option');
+	$body_font_size = get_field('body_font_size', 'option') . 'px';
 
     $styles = "
         .fill-primary{

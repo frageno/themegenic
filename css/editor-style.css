@@ -48,14 +48,8 @@
 .relative {
     position: relative
 }
-.bottom-0 {
-    bottom: 0px
-}
 .left-0 {
     left: 0px
-}
-.left-1\/2 {
-    left: 50%
 }
 .right-0 {
     right: 0px
@@ -106,6 +100,9 @@
 .mb-8 {
     margin-bottom: 2rem
 }
+.mt-24 {
+    margin-top: 6rem
+}
 .mt-4 {
     margin-top: 1rem
 }
@@ -130,6 +127,15 @@
 .h-6 {
     height: 1.5rem
 }
+.h-screen {
+    height: 100vh
+}
+.h-\[200\%\] {
+    height: 200%
+}
+.h-full {
+    height: 100%
+}
 .min-h-screen {
     min-height: 100vh
 }
@@ -139,8 +145,15 @@
 .w-6 {
     width: 1.5rem
 }
+.w-\[fit-content\] {
+    width: -moz-fit-content;
+    width: fit-content
+}
 .w-full {
     width: 100%
+}
+.w-\[200\%\] {
+    width: 200%
 }
 .max-w-screen-md {
     max-width: 768px
@@ -151,15 +164,14 @@
 .max-w-sm {
     max-width: 24rem
 }
+.max-w-\[470px\] {
+    max-width: 470px
+}
 .flex-none {
     flex: none
 }
 .flex-grow {
     flex-grow: 1
-}
-.-translate-x-1\/2 {
-    --tw-translate-x: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 .-translate-y-1\/2 {
     --tw-translate-y: -50%;
@@ -211,8 +223,17 @@
 .gap-md {
     gap: 40px
 }
+.gap-6 {
+    gap: 1.5rem
+}
+.gap-8 {
+    gap: 2rem
+}
 .gap-y-xs {
     row-gap: 20px
+}
+.gap-y-4 {
+    row-gap: 1rem
 }
 .rounded {
     border-radius: 0.25rem
@@ -323,6 +344,10 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem
 }
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem
+}
 .text-center {
     text-align: center
 }
@@ -352,6 +377,9 @@
 .text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem
+}
+.text-xl {
+    font-size: 1.25rem
 }
 .font-bold {
     font-weight: 700
@@ -423,11 +451,6 @@
 .shadow-md {
     --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-}
-.shadow-xl {
-    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 .transition-all {

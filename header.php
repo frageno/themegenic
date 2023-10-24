@@ -29,7 +29,7 @@
 
 <?php do_action( 'themegenic_site_before' ); ?>
 
-<div id="page" class="flex flex-col min-h-screen">
+<div id="page" class="flex flex-col">
 
 	<?php do_action( 'themegenic_header' ); ?>
 
