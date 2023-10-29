@@ -23,6 +23,12 @@ function themegenic_register_acf_blocks() {
             'title'             => __('Projects'),
             'render_template'   => '/template-parts/blocks/Projects/index.php',
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'text_image',
+            'title'             => __('Text Image'),
+            'render_template'   => '/template-parts/blocks/TextImage/index.php',
+        ));
     }
 
 }

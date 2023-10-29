@@ -22,7 +22,7 @@
             </div>
             <div class="projects-header__btn">
                 <?php if(isset($button['url']) && isset($button['title'])) { ?>
-                    <a class="flex-none w-[fit-content] mx-auto px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 border border-transparent bg-primary hover:!bg-[#101010] sm:w-auto rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none duration-300" target="<?php echo $button['target'] ?>" href="<?php echo $button['url']; ?>"> <?php echo $button['title']; ?></a>
+                    <a class="flex-none w-[fit-content] mx-auto px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors border border-transparent bg-primary hover:!bg-[#101010] sm:w-auto rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none duration-300" target="<?php echo $button['target'] ?>" href="<?php echo $button['url']; ?>"> <?php echo $button['title']; ?></a>
                 <?php } ?>
             </div>
         </div>
@@ -48,7 +48,7 @@
                         <div class="w-full max-w-[470px] rounded-t-[25px]">
                             <?php echo the_post_thumbnail('large', array('class' => 'w-full')); ?> 
                         </div>
-                        <div class="single-project__content flex items-center gap-x-xs bg-white px-4 py-5 box-shadow-md rounded-b-[25px]">
+                        <div class="single-project__content flex flex-col md:flex-row items-start md:items-center gap-xs bg-white px-4 py-5 box-shadow-md rounded-b-[25px]">
                             <div class="single-project__description">
                                 <span class="text-xl text-secondary font-medium"><?php the_title(); ?></span>
                                 <?php if($project_description) { ?> <p class="pt-2"><?php echo $project_description; ?></p> <?php } ?>
