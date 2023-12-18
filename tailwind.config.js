@@ -22,7 +22,7 @@ module.exports = {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
             fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
             fontFamily: {
-				primary: ["'Poppins', sans-serif"],
+				// primary: ["'Poppins', sans-serif"],
 			},
             spacing: {
 				'4xl': '150px',

@@ -154,19 +154,18 @@
             "label": "Body Font Size",
             "name": "body_font_size",
             "aria-label": "",
-            "type": "number",
+            "type": "range",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "min": "",
             "max": "",
-            "placeholder": "",
             "step": "",
             "prepend": "",
             "append": ""
@@ -181,7 +180,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "67",
                 "class": "",
                 "id": ""
             },
@@ -312,6 +311,33 @@
             "endpoint": 0
         },
         {
+            "key": "field_65809b0978095",
+            "label": "Header Layout",
+            "name": "header_layout",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Default Header": "Default Header",
+                "Top Bar Header": "Top Bar Header",
+                "Centered Logo Header": "Centered Logo Header"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_650af893f5acb",
             "label": "Footer",
             "name": "",
@@ -327,6 +353,30 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_65809b4578096",
+            "label": "Footer layout",
+            "name": "footer_layout",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2 Columns": "2 Columns",
+                "3 Columns": "3 Columns",
+                "4 Columns": "4 Columns"
+            },
+            "default_value": "4 Columns",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
         },
         {
             "key": "field_650af89cf5acc",
@@ -364,5 +414,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698052853
+    "modified": 1702928692
 }
