@@ -85,6 +85,10 @@
     margin-top: 2rem;
     margin-bottom: 2rem
 }
+.mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem
+}
 .mb-1 {
     margin-bottom: 0.25rem
 }
@@ -105,6 +109,9 @@
 }
 .mt-4 {
     margin-top: 1rem
+}
+.mt-0 {
+    margin-top: 0px
 }
 .block {
     display: block
@@ -306,6 +313,9 @@
     --tw-bg-opacity: 1;
     background-color: rgb(18 24 38 / var(--tw-bg-opacity))
 }
+.bg-transparent {
+    background-color: transparent
+}
 .fill-primary {
     fill: #0EA5E9
 }
@@ -321,6 +331,9 @@
 }
 .p-md {
     padding: 40px
+}
+.p-0 {
+    padding: 0px
 }
 .px-10 {
     padding-left: 2.5rem;
@@ -610,6 +623,9 @@ body {
     .md\:my-6 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem
+    }
+    .md\:block {
+        display: block
     }
     .md\:flex {
         display: flex

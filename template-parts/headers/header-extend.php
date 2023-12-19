@@ -12,19 +12,22 @@
 
 <header>
     <!-- topbar -->
-    <div class="topbar w-full py-3 border-b border-[#939DB8]">
+    <div class="topbar hidden md:block w-full py-3 border-b border-[#939DB8]">
         <div class="max-w-screen-xl px-5 mx-auto">
-            <?php
-				wp_nav_menu(
-					array(
-						'container_id'    => 'topbar-menu',
-						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-						'menu_class'      => 'lg:flex lg:-mx-4',
-						'li_class'        => 'lg:mx-4 text-xs text-body',
-						'fallback_cb'     => false,
-					)
-				);
-			?>
+            <div class="flex justify-between">
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'container_id'    => 'topbar-menu',
+                            'container_class' => 'bg-gray-100 mt-0 p-0 bg-transparent block',
+                            'menu_class'      => 'flex',
+                            'li_class'        => 'mx-4 text-xs text-body',
+                            'fallback_cb'     => false,
+                        )
+                    );
+                ?>
+                <a class="text-xs text-body" href="#"><?php _e('Book a demo' , 'themegenic'); ?></a>
+            </div>
         </div>
     </div>
     <div class="max-w-screen-xl px-5 mx-auto">
