@@ -6,3 +6,12 @@
     background: #ffffff;
     border-right: 1px solid #ddd;
 }
+
+div[data-type='message'] .acf-label {
+    margin: 0;
+}
+
+div[data-type='message'] .acf-label label {
+    font-size:16px;
+    margin:0;
+}

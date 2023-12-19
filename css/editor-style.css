@@ -262,6 +262,10 @@
 .border-b-2 {
     border-bottom-width: 2px
 }
+.border-\[\#939DB8\] {
+    --tw-border-opacity: 1;
+    border-color: rgb(147 157 184 / var(--tw-border-opacity))
+}
 .border-primary {
     --tw-border-opacity: 1;
     border-color: rgb(14 165 233 / var(--tw-border-opacity))
@@ -273,13 +277,9 @@
 .border-transparent {
     border-color: transparent
 }
-.border-\[\#939DB8\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(147 157 184 / var(--tw-border-opacity))
-}
-.border-b-\[\#939DB8\] {
-    --tw-border-opacity: 1;
-    border-bottom-color: rgb(147 157 184 / var(--tw-border-opacity))
+.bg-\[\#121826\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(18 24 38 / var(--tw-bg-opacity))
 }
 .bg-\[\#e6f8fe\] {
     --tw-bg-opacity: 1;
@@ -586,14 +586,6 @@ body {
 .hover\:\!bg-\[\#101010\]:hover {
     --tw-bg-opacity: 1 !important;
     background-color: rgb(16 16 16 / var(--tw-bg-opacity)) !important
-}
-.hover\:text-white:hover {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-.hover\:\!text-white:hover {
-    --tw-text-opacity: 1 !important;
-    color: rgb(255 255 255 / var(--tw-text-opacity)) !important
 }
 .focus\:outline-none:focus {
     outline: 2px solid transparent;
