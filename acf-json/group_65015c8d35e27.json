@@ -114,7 +114,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
+            "message": "Here you can change colors of theme",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -186,7 +186,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
+            "message": "Choose typography and size used on website",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -239,90 +239,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_650183efec4f8",
-            "label": "Logo",
-            "name": "logo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_650184629f911",
-            "label": "Favicon",
-            "name": "favicon",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_6501848a9f913",
-            "label": "Typography",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_65326acd9a36d",
-            "label": "Colors",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_650af84f28630",
             "label": "Sticky Buttons",
             "name": "",
@@ -365,6 +281,24 @@
             "endpoint": 0
         },
         {
+            "key": "field_6581ee4a0a1ba",
+            "label": "Header",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Theme Options for header",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_65809b0978095",
             "label": "Header Layout",
             "name": "header_layout",
@@ -374,7 +308,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -387,9 +321,59 @@
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
-            "ui": 0,
+            "ui": 1,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_650183efec4f8",
+            "label": "Logo",
+            "name": "logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_650184629f911",
+            "label": "Favicon",
+            "name": "favicon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_650af893f5acb",
@@ -468,5 +452,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702997638
+    "modified": 1703014111
 }
