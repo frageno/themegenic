@@ -6,7 +6,7 @@
  */
 
  $logo = get_field('logo', 'option');
-
+ $display_menu = get_field('display_menu', 'option');
 ?>
 
 
@@ -34,9 +34,7 @@
 			<div class="py-6 lg:flex lg:justify-between lg:items-center">
 				<div class="flex items-center justify-between">
 					<div class="logo">
-						<?php if ( has_custom_logo() ) { 
-                            the_custom_logo();
-						} elseif ($logo) { 
+						<?php if ($logo) { 
 							echo wp_get_attachment_image( $logo['ID'], 'large', false, array('class' => ''));
 						} else { ?>
 							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="text-lg font-extrabold uppercase">
@@ -68,7 +66,7 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'container_id'    => 'primary-menu',
+						'container_id'    => $display_menu ? $display_menu : 'primary',
 						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
 						'menu_class'      => 'lg:flex lg:-mx-4',
 						'theme_location'  => 'primary',

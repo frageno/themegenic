@@ -9,14 +9,20 @@
 	<?php 
 		wp_head();
 
-		// theme options
+		// header theme options
+ 		$header_layout = get_field('header_layout', 'option') ?? 'default';
+ 		$stikcy_header = get_field('stikcy_header', 'option');
 		$favicon = get_field('favicon', 'option');
+
+		// general theme options
 		$font_family = get_field('font_family', 'option');
+		$body_font_family = get_field('body_font_family', 'option');
 	?>
 	
-	<?php if($font_family){ ?>
+	<?php if(isset($font_family) && isset($body_font_family)){ ?>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=<?php echo $font_family; ?>:wght@400;500;600;700;800;900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=<?php echo $body_font_family; ?>:wght@400;500;600;700;800;900" rel="stylesheet">
 	<?php } ?>
 
 	<?php if($favicon) { ?>
@@ -24,7 +30,7 @@
 	<?php } ?>
 </head>
 
-<body <?php body_class( 'bg-[#121826] text-gray-900 antialiased text-body font-primary' ); ?>>
+<body <?php body_class( 'bg-[#121826] text-gray-900 antialiased text-body font-primary font-body' ); ?>>
 
 <?php do_action( 'themegenic_site_before' ); ?>
 
@@ -32,7 +38,13 @@
 
 	<?php do_action( 'themegenic_header' ); ?>
 
-	<?php echo get_template_part('/template-parts/headers/header', 'extend'); ?>
+	<?php 
+		if($header_layout === 'extend') {
+			echo get_template_part('/template-parts/headers/header', 'extend');
+		} else {
+			echo get_template_part('/template-parts/headers/header', 'default');
+		}
+	?>
 
 	<div id="content" class="flex-grow site-content">
 
