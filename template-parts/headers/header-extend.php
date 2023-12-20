@@ -7,26 +7,34 @@
 
  $logo = get_field('logo', 'option');
  $display_menu = get_field('display_menu', 'option');
+
+ $topbar_menu = get_field('topbar_menu', 'option');
+ $topbar_background_color = get_field('topbar_background_color', 'option') ?? 'bg-white';
+ $topbar_text_color = get_field('topbar_text_color', 'option') ?? 'text-white';
+ $topbar_classes = 'color: ' . $topbar_text_color . ';' . 'background: ' . $topbar_background_color;
+
 ?>
 
 
 <header>
     <!-- topbar -->
-    <div class="topbar hidden md:block w-full py-3 border-b border-[#939DB8]">
+    <div class="topbar hidden md:block w-full py-3 border-b border-[#939DB8]>"
+		style="<?php echo $topbar_classes; ?>">
+	
         <div class="max-w-screen-xl px-5 mx-auto">
             <div class="flex justify-between">
                 <?php
                     wp_nav_menu(
                         array(
-                            'container_id'    => 'topbar-menu',
+                            'container_id'    => $topbar_menu ? $topbar_menu : 'topbar',
                             'container_class' => 'bg-gray-100 mt-0 p-0 bg-transparent block',
                             'menu_class'      => 'flex',
-                            'li_class'        => 'mx-4 text-xs text-body',
+                            'li_class'        => 'first:ml-0 mx-4 text-xs',
                             'fallback_cb'     => false,
                         )
                     );
                 ?>
-                <a class="text-xs text-body" href="#"><?php _e('Book a demo' , 'themegenic'); ?></a>
+                <a class="text-xs" href="#"><?php _e('Book a demo' , 'themegenic'); ?></a>
             </div>
         </div>
     </div>
