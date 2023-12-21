@@ -29,6 +29,7 @@ function themegenic_register_acf_blocks() {
             'title'             => __('Text Image'),
             'render_template'   => '/template-parts/blocks/TextImage/index.php',
         ));
+        
     }
 
 }
