@@ -6,21 +6,15 @@
  */
 
  $logo = get_field('logo', 'option');
+ $sticky_header = get_field('sticky_header', 'option');
  $display_menu = get_field('display_menu', 'option');
-
  $topbar_menu = get_field('topbar_menu', 'option');
- $topbar_background_color = get_field('topbar_background_color', 'option') ?? 'bg-white';
- $topbar_text_color = get_field('topbar_text_color', 'option') ?? 'text-white';
- $topbar_classes = 'color: ' . $topbar_text_color . ';' . 'background: ' . $topbar_background_color;
-
 ?>
 
 
-<header>
+<header class="header <?php echo $sticky_header ? 'header-sticky' : '' ?>">
     <!-- topbar -->
-    <div class="topbar hidden md:block w-full py-3 border-b border-[#939DB8]>"
-		style="<?php echo $topbar_classes; ?>">
-	
+    <div class="topbar hidden md:block w-full py-3 border-b border-[#939DB8]>">
         <div class="max-w-screen-xl px-5 mx-auto">
             <div class="flex justify-between">
                 <?php
@@ -74,7 +68,7 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'container_id'    => $display_menu ? $display_menu : 'primary',
+						'container_id'    => $display_menu ? $display_menu : 'primary-menu',
 						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
 						'menu_class'      => 'lg:flex lg:-mx-4',
 						'theme_location'  => 'primary',

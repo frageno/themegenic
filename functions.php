@@ -8,7 +8,7 @@ function themegenic_setup() {
 
 	register_nav_menus(
 		array(
-			'primary'       => __( 'Primary Menu', 'themegenic' ),
+			'primary-menu'       => __( 'Primary Menu', 'themegenic' ),
 			'topbar'       	=> __( 'Topbar Menu', 'themegenic' ),
 			'footer_menu_1' => __( 'Footer Menu 1', 'themegenic' ),
 			'footer_menu_2' => __( 'Footer Menu 2', 'themegenic' ),

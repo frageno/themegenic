@@ -449,13 +449,14 @@
                 "id": ""
             },
             "choices": {
-                "primary": "Primary Menu",
+                "primary-menu": "Primary Menu",
+                "topbar": "Topbar Menu",
                 "footer_menu_1": "Footer Menu 1",
                 "footer_menu_2": "Footer Menu 2",
                 "footer_menu_3": "Footer Menu 3",
                 "footer_menu_4": "Footer Menu 4"
             },
-            "default_value": false,
+            "default_value": "primary-menu",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -594,8 +595,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "enable_opacity": 0,
+            "default_value": "#FFFFFF",
+            "enable_opacity": 1,
             "return_format": "string"
         },
         {
@@ -620,7 +621,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "#FFFFFF",
             "enable_opacity": 0,
             "return_format": "string"
         },
@@ -746,205 +747,91 @@
                 "id": ""
             },
             "choices": {
-                "2 Columns": "2 Columns",
-                "3 Columns": "3 Columns",
-                "4 Columns": "4 Columns",
-                "5 Columns": "5 Columns"
+                "2": "2 Columns",
+                "3": "3 Columns",
+                "4": "4 Columns",
+                "5": "5 Columns"
             },
-            "default_value": "4 Columns",
+            "default_value": "5 Columns",
             "return_format": "value",
             "allow_null": 0,
             "layout": "horizontal"
         },
         {
-            "key": "field_6582e74673de6",
-            "label": "Footer Menu 1",
-            "name": "footer_menu_1",
+            "key": "field_6584404248bab",
+            "label": "Footer Menus",
+            "name": "footer_menus",
             "aria-label": "",
-            "type": "select",
-            "instructions": "Menu displayed in second column",
+            "type": "repeater",
+            "instructions": "Add headlines and menus to footer columns",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "2 Columns"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "3 Columns"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "4 Columns"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "5 Columns"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "primary": "Primary Menu",
-                "footer_menu_1": "Footer Menu 1",
-                "footer_menu_2": "Footer Menu 2",
-                "footer_menu_3": "Footer Menu 3",
-                "footer_menu_4": "Footer Menu 4"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_6582e928fd1a8",
-            "label": "Footer Menu 2",
-            "name": "footer_menu_2",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "Menu displayed in third column",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "3 Columns"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "4 Columns"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "5 Columns"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "primary": "Primary Menu",
-                "footer_menu_1": "Footer Menu 1",
-                "footer_menu_2": "Footer Menu 2",
-                "footer_menu_3": "Footer Menu 3",
-                "footer_menu_4": "Footer Menu 4"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_6582e92afd1a9",
-            "label": "Footer Menu 3",
-            "name": "footer_menu_3",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "Menu displayed in fourth column",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "4 Columns"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "5 Columns"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "primary": "Primary Menu",
-                "footer_menu_1": "Footer Menu 1",
-                "footer_menu_2": "Footer Menu 2",
-                "footer_menu_3": "Footer Menu 3",
-                "footer_menu_4": "Footer Menu 4"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_6582ec39bef15",
-            "label": "Footer Menu 4",
-            "name": "footer_menu_4",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "Menu displayed in fifth column",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_65809b4578096",
-                        "operator": "==",
-                        "value": "5 Columns"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "primary": "Primary Menu",
-                "footer_menu_1": "Footer Menu 1",
-                "footer_menu_2": "Footer Menu 2",
-                "footer_menu_3": "Footer Menu 3",
-                "footer_menu_4": "Footer Menu 4"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "layout": "row",
+            "pagination": 0,
+            "min": 1,
+            "max": 4,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6584404a48bac",
+                    "label": "Footer Menu Headline",
+                    "name": "footer_menu_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6584404248bab"
+                },
+                {
+                    "key": "field_6584405f48bad",
+                    "label": "Footer Menu",
+                    "name": "footer_menu",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary-menu": "Primary Menu",
+                        "topbar": "Topbar Menu",
+                        "footer_menu_1": "Footer Menu 1",
+                        "footer_menu_2": "Footer Menu 2",
+                        "footer_menu_3": "Footer Menu 3",
+                        "footer_menu_4": "Footer Menu 4"
+                    },
+                    "default_value": "primary-menu",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6584404248bab"
+                }
+            ]
         },
         {
             "key": "field_6582e9cdc59db",
@@ -1005,7 +892,7 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 4,
             "placeholder": "",
             "new_lines": ""
         },
@@ -1133,6 +1020,26 @@
             "message": "Customize options for breadcrumbs",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_6584584fef2f2",
+            "label": "Enable Breadcrumbs",
+            "name": "enable_breadcrumbs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         }
     ],
     "location": [
@@ -1153,5 +1060,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703083510
+    "modified": 1703172192
 }

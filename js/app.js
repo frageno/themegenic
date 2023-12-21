@@ -41,6 +41,26 @@ function Header() {
   if (document.querySelectorAll("header").length < 1) {
     return;
   }
+  var header = document.querySelector(".header");
+  var topbar = document.querySelector(".topbar");
+  var toggleClass = "is-sticky";
+  function handleStickyHeaderOnScroll() {
+    var currentScroll = window.pageYOffset;
+    var windowWidth = window.innerWidth;
+    if (currentScroll > 150) {
+      header.classList.add(toggleClass);
+      topbar.style.display = "none";
+    } else {
+      header.classList.remove(toggleClass);
+      if (windowWidth > 768) {
+        topbar.style.display = "block";
+      } else {
+        topbar.style.display = "none";
+      }
+    }
+  }
+  window.addEventListener("scroll", handleStickyHeaderOnScroll);
+  window.addEventListener("resize", handleStickyHeaderOnScroll);
 }
 
 /***/ }),

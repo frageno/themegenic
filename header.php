@@ -11,7 +11,6 @@
 
 		// header theme options
  		$header_layout = get_field('header_layout', 'option') ?? 'default';
- 		$stikcy_header = get_field('stikcy_header', 'option');
 		$favicon = get_field('favicon', 'option');
 
 		// general theme options
@@ -30,7 +29,7 @@
 	<?php } ?>
 </head>
 
-<body <?php body_class( 'bg-[#121826] text-gray-900 antialiased text-body font-primary font-body' ); ?>>
+<body <?php body_class( 'bg-[#121826] text-gray-900 antialiased text-body font-body' ); ?>>
 
 <?php do_action( 'themegenic_site_before' ); ?>
 
