@@ -3,32 +3,35 @@
  * Register ACF Blocks
  */
 
-function themegenic_register_acf_blocks() {
+function themegenic_register_acf_blocks($block_name) {
+    // $block_name = implode
+    // $block_name = explode(' ', $block_name);
+    // print_r(str_replace(' ', '', $block_name));
 
     if( function_exists('acf_register_block_type') ){
-        acf_register_block_type(array(
-            'name'              => 'teaser_cards',
-            'title'             => __('Teaser Cards'),
-            'render_template'   => '/template-parts/blocks/TeaserCards/index.php',
-        ));
+        // acf_register_block_type(array(
+        //     'name'              => strtolower(str_replace(' ', '-', $block_name)),
+        //     'title'             => __($block_name),
+        //     'render_template'   => '/template-parts/blocks/' . str_replace(' ', '', $block_name) .  '/index.php',
+        // ));
 
-        acf_register_block_type(array(
-            'name'              => 'header_intro',
-            'title'             => __('Header Intro'),
-            'render_template'   => '/template-parts/blocks/HeaderIntro/index.php',
-        ));
+        // acf_register_block_type(array(
+        //     'name'              => 'header_intro',
+        //     'title'             => __('Header Intro'),
+        //     'render_template'   => '/template-parts/blocks/HeaderIntro/index.php',
+        // ));
 
-        acf_register_block_type(array(
-            'name'              => 'projects',
-            'title'             => __('Projects'),
-            'render_template'   => '/template-parts/blocks/Projects/index.php',
-        ));
+        // acf_register_block_type(array(
+        //     'name'              => 'projects',
+        //     'title'             => __('Projects'),
+        //     'render_template'   => '/template-parts/blocks/Projects/index.php',
+        // ));
 
-        acf_register_block_type(array(
-            'name'              => 'text_image',
-            'title'             => __('Text Image'),
-            'render_template'   => '/template-parts/blocks/TextImage/index.php',
-        ));
+        // acf_register_block_type(array(
+        //     'name'              => 'text_image',
+        //     'title'             => __('Text Image'),
+        //     'render_template'   => '/template-parts/blocks/TextImage/index.php',
+        // ));
         
     }
 

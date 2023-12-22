@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Template Name: Teaser Cards
+ * Template Name: Text Image
  */
 
 include (get_stylesheet_directory() . '/template-parts/elements/Button/index.php');
@@ -26,13 +26,13 @@ $layout = 'bg-bg-[' . $background_color . '] ' . 'text-[' . $text_color . ']';
 
 <section id="<?php echo esc_attr($id); ?>" class="bg-[#e6f8fe]">
     <div class="max-w-screen-xl px-5 py-32 mx-auto">
-        <div class="flex flex-col md:flex-row items-start md:items-center">
+        <div class="flex flex-col items-start md:flex-row md:items-center">
             <?php if($image): ?>
-                <div class="image w-full md:w-1/2">
+                <div class="w-full image md:w-1/2">
                     <?php echo wp_get_attachment_image( $image['ID'], 'large', false, array('class' => 'object-cover') ); ?>
                 </div>
             <?php endif; ?>
-            <div class="flex flex-col justify-start gap-8 content w-full md:w-1/2">
+            <div class="flex flex-col justify-start w-full gap-8 content md:w-1/2">
                 <?php if($headline) { create_headline($headline, 'text-secondary font-semibold text-4xl', 'h2'); } ?>
                 <?php if($subheadline) { create_headline($subheadline, 'text-secondary font-semibold text-2xl', 'span'); } ?>
                 <?php if($description) { ?> <?php echo $description; ?> <?php } ?>
