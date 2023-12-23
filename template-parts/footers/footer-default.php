@@ -9,11 +9,6 @@
  $footer_layout = get_field('footer_layout', 'option');
  $footer_logo = get_field('footer_logo', 'option');
  $footer_description = get_field('footer_description', 'option');
- $footer_background_color = get_field('footer_background_color', 'option');
- $footer_text_color = get_field('footer_text_color', 'option');
- $footer_copyright_background_color = get_field('footer_copyright_background_color', 'option');
- $footer_copyright_text_color = get_field('footer_copyright_text_color', 'option');
-
 
 ?>
 
@@ -32,10 +27,13 @@
             <p><?php echo $footer_description; ?></p>
         <?php } ?>
        </div>
-            <?php if(have_rows('footer_menus', 'option')){ ?>
+            <?php if(have_rows('footer_menus', 'option')){ 
+               $menu_count = 0;
+              ?>
                 <?php while(have_rows('footer_menus', 'option')){ the_row(); 
                     $footer_menu_headline = get_sub_field('footer_menu_headline');
                     $footer_menu = get_sub_field('footer_menu');
+                    if ($menu_count < $footer_layout) {
                 ?>
                 <div class="sm:w-1/2 md:w-1/4 xl:w-1/6">
                     <p class="mb-6 text-xl font-bold"><?php echo $footer_menu_headline; ?></p>
@@ -43,15 +41,16 @@
                         wp_nav_menu(
                             array(
                                 'container_id'    => $footer_menu,
-                                'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-                                'menu_class'      => 'lg:flex lg:-mx-4',
-                                'li_class'        => 'lg:mx-4',
+                                'container_class' => 'hidden mt-4 p-4 lg:mt-0 lg:p-0 lg:flex',
+                                'menu_class'      => 'lg:flex flex-col lg:-mx-4',
+                                'li_class'        => 'py-2 text-[14px]',
                                 'theme_location'  => $footer_menu,
                             )
                         );
                     ?>
                 </div>
-                <?php } ?>
+                <?php $menu_count++; }
+                      } ?>
             <?php } ?>
     </div>
 </div>

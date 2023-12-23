@@ -7,25 +7,32 @@
 if(!function_exists('enqueue_theme_genic_styles')) {
     function enqueue_theme_genic_styles()
     {
-        // global colors options
+        // Global colors options
         $primary_color = get_field('primary_color', 'option');
         $secondary_color = get_field('secondary_color', 'option');
         $body_text_color = get_field('body_text_color', 'option');
     
-        // global typography options
+        // Global typography styles options
         $font_family = get_field('font_family', 'option');
         $body_font_family = get_field('body_font_family', 'option');
         $body_font_size = get_field('body_font_size', 'option') . 'px';
 
-        // header styling options
+        // Header styling styles options
         $header_background_color = !empty(get_field('header_background_color', 'option')) ? get_field('header_background_color', 'option') : '#FFFFFF';
         $header_text_color = !empty(get_field('header_text_color', 'option')) ? get_field('header_text_color', 'option') : '#000000';
         
-        // topbar styling options
+        // Topbar styling styles options
         $topbar_background_color = !empty(get_field('topbar_background_color', 'option')) ? get_field('topbar_background_color', 'option') : '#FFFFFF';
         $topbar_text_color = !empty(get_field('topbar_text_color', 'option')) ? get_field('topbar_text_color', 'option') : '#000000';
         
-    
+        // Footer styling styles options
+        $footer_background_color = !empty(get_field('footer_background_color', 'option')) ? get_field('footer_background_color', 'option') : '#121826';
+        $footer_text_color = !empty(get_field('footer_text_color', 'option')) ? get_field('footer_text_color', 'option') : '#FFFFFF';
+        $footer_copyright_background_color = !empty(get_field('footer_copyright_background_color', 'option')) ? get_field('footer_copyright_background_color', 'option') : '#121826';
+        $footer_copyright_text_color = !empty(get_field('footer_copyright_text_color', 'option')) ? get_field('footer_copyright_text_color', 'option') : '#FFFFFF';
+
+
+
         $styles = "
             .fill-primary{
                 fill: $primary_color !important;
@@ -66,6 +73,10 @@ if(!function_exists('enqueue_theme_genic_styles')) {
             .topbar {
                 color: $topbar_text_color;
                 background: $topbar_background_color;
+            }
+            .footer {
+                color: $footer_text_color;
+                background: $footer_background_color;
             }
         ";
     
