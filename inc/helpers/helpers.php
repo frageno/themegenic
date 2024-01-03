@@ -46,6 +46,11 @@ if(!function_exists('enqueue_theme_genic_styles')) {
             .border-primary{
                 border-color: $primary_color !important;
             }
+            .btn-primary {
+                font-size:14px!important;
+                line-height:24px!important;
+                background: radial-gradient(990.62% 110.07% at 52.08% 50%, $secondary_color 0%, $secondary_color 100%);
+            }
             .bg-secondary {
                 background-color: $secondary_color !important;
             }
@@ -56,7 +61,7 @@ if(!function_exists('enqueue_theme_genic_styles')) {
                 border-color: $secondary_color !important;
             }
             .text-body {
-                color: $body_text_color !important;
+                color: #$body_text_color !important;
             }
             .font-primary {
                 font-family: $font_family !important;
