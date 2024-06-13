@@ -63,6 +63,9 @@
 .top-1\/2 {
     top: 50%
 }
+.z-0 {
+    z-index: 0
+}
 .z-10 {
     z-index: 10
 }
@@ -137,6 +140,12 @@
 .h-6 {
     height: 1.5rem
 }
+.h-auto {
+    height: auto
+}
+.h-full {
+    height: 100%
+}
 .min-h-screen {
     min-height: 100vh
 }
@@ -155,6 +164,9 @@
 }
 .max-w-\[470px\] {
     max-width: 470px
+}
+.max-w-screen-lg {
+    max-width: 1024px
 }
 .max-w-screen-md {
     max-width: 768px
@@ -215,9 +227,6 @@
 .flex-col {
     flex-direction: column
 }
-.flex-col-reverse {
-    flex-direction: column-reverse
-}
 .flex-wrap {
     flex-wrap: wrap
 }
@@ -239,6 +248,9 @@
 .gap-5 {
     gap: 1.25rem
 }
+.gap-6 {
+    gap: 1.5rem
+}
 .gap-8 {
     gap: 2rem
 }
@@ -247,18 +259,6 @@
 }
 .gap-xs {
     gap: 20px
-}
-.gap-20 {
-    gap: 5rem
-}
-.gap-16 {
-    gap: 4rem
-}
-.gap-4 {
-    gap: 1rem
-}
-.gap-6 {
-    gap: 1.5rem
 }
 .gap-y-8 {
     row-gap: 2rem
@@ -277,9 +277,6 @@
 }
 .rounded-xl {
     border-radius: 0.75rem
-}
-.rounded-\[12px\] {
-    border-radius: 12px
 }
 .rounded-b-\[25px\] {
     border-bottom-right-radius: 25px;
@@ -304,10 +301,6 @@
 .border-\[\#939DB810\] {
     border-color: #939DB810
 }
-.border-\[\#939DB8\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(147 157 184 / var(--tw-border-opacity))
-}
 .border-primary {
     --tw-border-opacity: 1;
     border-color: rgb(14 165 233 / var(--tw-border-opacity))
@@ -318,6 +311,10 @@
 }
 .border-transparent {
     border-color: transparent
+}
+.border-lightBlue {
+    --tw-border-opacity: 1;
+    border-color: rgb(147 157 184 / var(--tw-border-opacity))
 }
 .bg-\[\#121826\] {
     --tw-bg-opacity: 1;
@@ -453,6 +450,10 @@
     font-size: 1rem;
     line-height: 1.5rem
 }
+.text-h1 {
+    font-size: 64px;
+    line-height: 1.1
+}
 .text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem
@@ -461,16 +462,17 @@
     font-size: 0.875rem;
     line-height: 1.25rem
 }
+.text-small {
+    font-size: 14px;
+    line-height: 18px
+}
 .text-xl {
-    font-size: 1.25rem
+    font-size: 1.25rem;
+    line-height: 1.75rem
 }
 .text-xs {
     font-size: 0.75rem;
     line-height: 1rem
-}
-.text-6xl {
-    font-size: 3.75rem;
-    line-height: 1
 }
 .font-bold {
     font-weight: 700
@@ -707,9 +709,6 @@ body {
     .md\:flex-row-reverse {
         flex-direction: row-reverse
     }
-    .md\:flex-col-reverse {
-        flex-direction: column-reverse
-    }
     .md\:items-end {
         align-items: flex-end
     }
@@ -728,14 +727,6 @@ body {
     .md\:py-4 {
         padding-top: 1rem;
         padding-bottom: 1rem
-    }
-    .md\:py-12 {
-        padding-top: 3rem;
-        padding-bottom: 3rem
-    }
-    .md\:py-16 {
-        padding-top: 4rem;
-        padding-bottom: 4rem
     }
     .md\:text-3xl {
         font-size: 1.875rem;
@@ -766,9 +757,6 @@ body {
     .lg\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr))
     }
-    .lg\:items-start {
-        align-items: flex-start
-    }
     .lg\:items-center {
         align-items: center
     }
@@ -780,10 +768,6 @@ body {
     }
     .lg\:p-0 {
         padding: 0px
-    }
-    .lg\:py-16 {
-        padding-top: 4rem;
-        padding-bottom: 4rem
     }
     .lg\:text-5xl {
         font-size: 3rem;

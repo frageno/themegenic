@@ -1,0 +1,9 @@
+.header {
+    .topbar, #primary-menu {
+        li {
+            a {
+                @apply transition-all duration-300;
+            }
+        }
+    }
+}

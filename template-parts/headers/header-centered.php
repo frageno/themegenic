@@ -52,7 +52,7 @@
 						'container_id'    => 'primary-menu',
 						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
 						'menu_class'      => 'lg:flex lg:-mx-4',
-						'theme_location'  => 'primary',
+						'theme_location'  => 'primary-menu',
 						'li_class'        => 'lg:mx-4',
 						'fallback_cb'     => false,
 					)

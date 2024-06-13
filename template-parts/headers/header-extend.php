@@ -14,16 +14,17 @@
 
 <header class="header <?php echo $sticky_header ? 'header-sticky' : '' ?>">
     <!-- topbar -->
-    <div class="topbar hidden md:block w-full py-3 border-b border-[#939DB8]>">
+    <div class="hidden w-full py-3 border-b topbar md:block">
         <div class="max-w-screen-xl px-5 mx-auto">
             <div class="flex justify-between">
                 <?php
                     wp_nav_menu(
                         array(
-                            'container_id'    => $topbar_menu ? $topbar_menu : 'topbar',
+                            'container_id'    => 'topbar',
                             'container_class' => 'bg-gray-100 mt-0 p-0 bg-transparent block',
                             'menu_class'      => 'flex',
                             'li_class'        => 'first:ml-0 mx-4 text-xs',
+							'theme_location'  => 'topbar',
                             'fallback_cb'     => false,
                         )
                     );
@@ -68,15 +69,25 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'container_id'    => $display_menu ? $display_menu : 'primary-menu',
+						'container_id'    => 'primary-menu',
 						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
 						'menu_class'      => 'lg:flex lg:-mx-4',
-						'theme_location'  => 'primary',
-						'li_class'        => 'lg:mx-4',
+						'theme_location'  => 'primary-menu',
+						'li_class'        => 'lg:mx-4 font-medium text-small',
 						'fallback_cb'     => false,
 					)
 				);
 				?>
+				<?php if(have_rows('header_buttons', 'option')): ?>
+					<div class="header-buttons">
+					<?php while(have_rows('header_buttons', 'option')): the_row();
+						$button = get_sub_field('button');
+					?>
+						<a href="<?= $button['url']; ?>"><?= $button['title']; ?></a>
+					<?php endwhile; wp_reset_postdata(); ?>
+					</div>
+				<?php endif; ?>
+
 			</div>
 		</div>
 </header>

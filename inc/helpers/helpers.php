@@ -20,10 +20,13 @@ if(!function_exists('enqueue_theme_genic_styles')) {
         // Header styling styles options
         $header_background_color = !empty(get_field('header_background_color', 'option')) ? get_field('header_background_color', 'option') : '#FFFFFF';
         $header_text_color = !empty(get_field('header_text_color', 'option')) ? get_field('header_text_color', 'option') : '#000000';
+        $header_text_hover_color = !empty(get_field('header_text_hover_color', 'option')) ? get_field('header_text_hover_color', 'option') : '#FFFFFF';
         
         // Topbar styling styles options
         $topbar_background_color = !empty(get_field('topbar_background_color', 'option')) ? get_field('topbar_background_color', 'option') : '#FFFFFF';
         $topbar_text_color = !empty(get_field('topbar_text_color', 'option')) ? get_field('topbar_text_color', 'option') : '#000000';
+        $topbar_text_hover_color = !empty(get_field('topbar_text_hover_color', 'option')) ? get_field('topbar_text_hover_color', 'option') : '#FFFFFF';
+        $topbar_border_color = !empty(get_field('topbar_border_color', 'option')) ? get_field('topbar_border_color', 'option') : '#FFFFFF';
         
         // Footer styling styles options
         $footer_background_color = !empty(get_field('footer_background_color', 'option')) ? get_field('footer_background_color', 'option') : '#121826';
@@ -31,8 +34,14 @@ if(!function_exists('enqueue_theme_genic_styles')) {
         $footer_copyright_background_color = !empty(get_field('footer_copyright_background_color', 'option')) ? get_field('footer_copyright_background_color', 'option') : '#121826';
         $footer_copyright_text_color = !empty(get_field('footer_copyright_text_color', 'option')) ? get_field('footer_copyright_text_color', 'option') : '#FFFFFF';
 
+        // Breadcrumb styling styles options
+        $breadcrumb_background_color = !empty(get_field('breadcrumb_background_color', 'option')) ? get_field('breadcrumb_background_color', 'option') : '#FFFFFF';
+        $breadcrumb_text_color = !empty(get_field('breadcrumb_text_color', 'option')) ? get_field('breadcrumb_text_color', 'option') : '#000000';
 
-
+        // Breadcrumb image and overlay
+        $breadcrumb_background_image = !empty(get_field('breadcrumb_background_image', 'option')) ? get_field('breadcrumb_background_image', 'option') : null;
+        $breadcrumb_background_image_overlay = !empty(get_field('breadcrumb_background_image_overlay', 'option')) ? get_field('breadcrumb_background_image_overlay', 'option') : '';
+        
         $styles = "
             .fill-primary{
                 fill: $primary_color !important;
@@ -75,13 +84,27 @@ if(!function_exists('enqueue_theme_genic_styles')) {
                 color: $header_text_color;
                 background: $header_background_color;
             }
+            .header a:hover{
+                color: $header_text_hover_color;
+            }
             .topbar {
                 color: $topbar_text_color;
                 background: $topbar_background_color;
+                border-bottom: 1px solid $topbar_border_color;
+            }
+            .topbar a:hover{
+                color: $topbar_text_hover_color;
             }
             .footer {
                 color: $footer_text_color;
                 background: $footer_background_color;
+            }
+            .breadcrumb {
+                color: $breadcrumb_text_color;
+                background: $breadcrumb_background_color;
+            }
+            .breadcrumbImage {
+                background: background:url($breadcrumb_background_image);
             }
         ";
     
@@ -95,23 +118,22 @@ if(!function_exists('enqueue_theme_genic_styles')) {
 
 /**
  * 
- * Add registered menus to choose by user
+ * Add created menus to choose by user in theme option
  * 
  */
 
 if(!function_exists('populate_menu_location_field')) {
     function populate_menu_location_field($field) {
-        if($field['name'] == 'display_menu' || $field['name'] == 'footer_menu' ) {
-            $registered_menus = get_registered_nav_menus();
-            $first_menu = !empty($registered_menus) ? key($registered_menus) : '';
+        if($field['name'] == 'display_menu' || $field['name'] == 'topbar_menu' || $field['name'] == 'footer_menu' ) {
+            $menus = wp_get_nav_menus();
             $choices = array();
     
-            foreach($registered_menus as $menu => $description) {
-                $choices[$menu] = $description;
+            foreach($menus as $menu) {
+                $menu_name = $menu->name;
+                $choices[$menu->name] = $menu_name;
             }
     
             $field['choices'] = $choices;
-            $field['default_value'] = $first_menu;
         }
         return $field;
     }
