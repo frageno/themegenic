@@ -5,7 +5,9 @@
 @import "base.css";
 @import "custom.css";
 @import "header.css";
+@import "footer.css";
 
 
 @import "../../template-parts/elements/Button/style.css";
 @import "../../template-parts/elements/Breadcrumbs/style.css";
+@import "../../template-parts/blocks/TextImage/style.css";

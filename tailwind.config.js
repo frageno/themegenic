@@ -20,16 +20,15 @@ module.exports = {
         },
         extend: {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
-            fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
             fontFamily: {
 				// primary: ["'Poppins', sans-serif"],
 			},
             fontSize: {
-                'h1': ['64px', 1.1],
-                'h2': ['48px', 1.1],
-                'h3': ['32px', 1.1],
-                'h4': ['24px', 1.1],
-                'h5': ['20px', 1.1],
+                'headline-h1': ['64px', '72px'],
+                'headline-h2': ['48px', 1.1],
+                'headline-h3': ['32px', 1.1],
+                'headline-h4': ['24px', 1.1],
+                'headline-h5': ['20px', 1.1],
                 small: ['14px', '18px'],
             },
             spacing: {

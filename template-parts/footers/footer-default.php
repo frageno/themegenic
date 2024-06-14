@@ -25,7 +25,7 @@
 			</a>
 		<?php } ?>
         <?php if($footer_description) { ?> 
-            <p class="text-sm mt-4 mb-6"><?php echo $footer_description; ?></p>
+            <p class="mt-4 mb-6 text-sm"><?php echo $footer_description; ?></p>
         <?php } ?>
         <?php if (have_rows('footer_contacts', 'option')) { ?>
           <ul class="py-6 border-t border-[#939DB810]">
@@ -33,8 +33,8 @@
               $footer_contact = get_sub_field('footer_contact');
             ?>
               <?php if(isset($footer_contact['url']) && isset($footer_contact['title'])) { ?>
-                <li class="text-sm pb-2">
-                  <a class="duration-300 transition-all hover:text-white" href="<?php echo $footer_contact['url']; ?>"><?php echo $footer_contact['title']; ?></a>
+                <li class="pb-2 text-small">
+                  <a class="transition-all duration-300 hover:text-white" href="<?php echo $footer_contact['url']; ?>"><?php echo $footer_contact['title']; ?></a>
                 </li>
               <?php } ?>
             <?php } ?>
@@ -54,11 +54,11 @@
                     <?php
                         wp_nav_menu(
                             array(
-                                'container_id'    => $footer_menu,
-                                'container_class' => 'mt-4 p-4 lg:mt-0 lg:p-0 block',
-                                'menu_class'      => 'lg:flex flex-col',
-                                'li_class'        => 'py-2 text-[14px] duration-300 transition-all hover:text-white',
-                                'theme_location'  => $footer_menu,
+                                'menu'            => $footer_menu,
+                                'container_id'    => 'footer-menu-' . $menu_count,
+                                'container_class' => 'mt-4 p-4 px-0 lg:mt-0 lg:p-0 block',
+                                'menu_class'      => 'lg:flex flex-col footer__nav',
+                                'li_class'        => 'py-2 text-small hover:text-white tranistion-all duration-300'
                             )
                         );
                     ?>
@@ -69,7 +69,7 @@
     </div>
 </div>
 <div class="copyright w-ful bg-[#222838] border-t border-[#939DB810] px-4 py-4">
-    <div class="flex flex-wrap justify-center items-center max-w-screen-xl mx-auto md:justify-between">
+    <div class="flex flex-wrap items-center justify-center max-w-screen-xl mx-auto md:justify-between">
       <div class="w-full md:w-1/3">
         <p class="text-xs"><?php echo $copyright_text; ?></p>
       </div>

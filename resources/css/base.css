@@ -37,5 +37,26 @@ p {
     }
   }
 
+/* TYPOGRAPHY UTLITY CLASS */
+
+.typo-h1 {
+  @apply text-headline-h2 lg:text-headline-h1;
+}
+
+.typo-h2 {
+  @apply text-headline-h3 lg:text-headline-h2;
+}
+
+.typo-h3 {
+  @apply lg:text-headline-h3;
+}
+
+.typo-h4 {
+  @apply text-headline-h4;
+}
+
+.typo-h5 {
+  @apply text-headline-h5;
+}
 
 

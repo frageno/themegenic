@@ -4,7 +4,7 @@ $enable_breadcrumbs = get_field('enable_breadcrumbs', 'option');
 
 ?>
 
-<div class="mx-auto">
+<div class="mx-auto text-body">
 
 	<?php if ( have_posts() ) : ?>
 		<?php

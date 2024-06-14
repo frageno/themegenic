@@ -58,7 +58,10 @@ if(!function_exists('enqueue_theme_genic_styles')) {
             .btn-primary {
                 font-size:14px!important;
                 line-height:24px!important;
-                background: radial-gradient(990.62% 110.07% at 52.08% 50%, $secondary_color 0%, $secondary_color 100%);
+                background: $primary_color !important;
+            }
+            .btn-primary:hover {
+                background: $secondary_color !important;
             }
             .bg-secondary {
                 background-color: $secondary_color !important;
@@ -70,7 +73,7 @@ if(!function_exists('enqueue_theme_genic_styles')) {
                 border-color: $secondary_color !important;
             }
             .text-body {
-                color: #$body_text_color !important;
+                color: $body_text_color !important;
             }
             .font-primary {
                 font-family: $font_family !important;
@@ -140,3 +143,32 @@ if(!function_exists('populate_menu_location_field')) {
     
     add_filter('acf/load_field', 'populate_menu_location_field');
 }
+
+/**
+ * 
+ * 
+ * Fill out Headline Tag Selector field with needed headlines
+ * 
+ */
+
+ if(!function_exists('fill_out_headline_tag_selector_field')) {
+    function fill_out_headline_tag_selector_field($field) {
+        if($field['name'] == 'headline_tag_selector'){
+            $choices = array(
+                'h1' => 'H1',
+                'h2' => 'H2',
+                'h3' => 'H3',
+                'h4' => 'H4',
+                'h5' => 'H5',
+                'h6' => 'H6',
+            );
+
+            $field['choices'] = $choices;
+            $field['default_value'] = 'h2';
+        }
+
+        return $field;
+    }
+
+    add_filter('acf/load_field', 'fill_out_headline_tag_selector_field');
+ }

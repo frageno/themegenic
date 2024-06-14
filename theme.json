@@ -9,8 +9,8 @@
       "palette": [
         {
           "name": "Primary",
-          "slug": "primary",
-          "color": "#0EA5E9"
+          "slug": "primaryBlue",
+          "color": "#3A7BD5"
         },
         {
           "name": "Secondary",
@@ -30,7 +30,7 @@
         {
           "name": "Ligh Blue",
           "slug": "lightBlue",
-          "color": "#939DB8"
+          "color": "rgba(147, 157, 184, 0.1)"
         }
       ]
     },
@@ -65,6 +65,11 @@
           "slug": "xxxl",
           "name": "3XL",
           "size": "1.875rem"
+        },
+        {
+          "slug": "headlineH1",
+          "name": "h1",
+          "size": "4rem"
         }
       ]
     }
