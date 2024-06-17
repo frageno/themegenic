@@ -48,7 +48,7 @@ module.exports = {
             'sm': '640px',
             'md': '768px',
             'lg': '1024px',
-            'xl': tailpress.theme('settings.layout.wideSize', theme),
+            'xl': '1280px',
             '2xl': '1440px',
             fhd: '1920px',
         }

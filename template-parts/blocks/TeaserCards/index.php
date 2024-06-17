@@ -4,30 +4,40 @@
  * Template Name: Teaser Cards
  */
 
+include (get_stylesheet_directory() . '/template-parts/elements/Headline/index.php');
+
+
 // Create uniqe ids
-$id = 'header-intro' . $block['id'];
+$id = 'teaser-cards-' . $block['id'];
+
+// Get fields
+$headline = get_field('headline');
+$headline_tag_selector = get_field('headline_tag_selector') ?? 'h2';
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="scroll-section w-full">
+<section id="<?php echo esc_attr($id); ?>" class="w-full scroll-section">
     <?php if(have_rows('cards')): ?>
         <div class="max-w-screen-xl px-5 py-32 mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+            <?php if($headline) { create_headline($headline, 'text-white typo-h2 font-bold mb-md', $headline_tag_selector); } ?>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <?php while(have_rows('cards')): the_row();
-                    $image = get_sub_field('image');
-                    $headline = get_sub_field('headline');
-                    $description = get_sub_field('description');
+                    $card_image = get_sub_field('card_image');
+                    $card_title = get_sub_field('card_title');
+                    $card_description = get_sub_field('card_description');
                 ?>
-                    <div class="p-md teaser-card bg-white box-shadow border-b-2 border-transparent hover:border-b-2 hover:border-primary flex flex-col items-center justify-center text-center rounded-3xl transition-all duration-300">
-                        <?php if($image): ?>
+                    <div class="flex flex-col transition-all duration-300 gap-sm md:gap-md bg-darkBg p-xs py-sm lg:p-md teaser-card box-shadow rounded-3xl">
+                        <?php if($card_image): ?>
                             <div class="image">
-                                <?php echo wp_get_attachment_image( $image['ID'], 'large', false, array('class' => 'object-cover') ); ?>
+                                <?php echo wp_get_attachment_image( $card_image, 'large', false, array('class' => 'object-cover transition-all duration-300 hover:scale-105 rounded-[12px]') ); ?>
                             </div>
                         <?php endif; ?>
-                        <div class="content flex flex-col gap-y-xs">
-                            <h4 class="font-semibold text-secondary text-3xl"><?php echo $headline; ?></h4>
-                            <p><?php echo $description; ?></p>
-                        </div>
+                        <?php if($card_title && $card_description){ ?>
+                            <div class="flex flex-col content gap-y-xxs">
+                                <h4 class="font-bold text-white text-headline-h5"><?php echo $card_title; ?></h4>
+                                <p><?php echo $card_description; ?></p>
+                            </div>
+                        <?php } ?>
                     </div>
                 <?php endwhile; 
                       wp_reset_postdata(); ?>
