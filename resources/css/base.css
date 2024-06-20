@@ -37,6 +37,25 @@ p {
     }
   }
 
+/* CIRCLE */
+
+.circle {
+  @apply relative;
+    
+      &:before {
+          @apply hidden lg:block h-auto absolute lg:-left-4xl -z-[1];
+          content: url("data:image/svg+xml,%3Csvg width='418' height='418' viewBox='0 0 418 418' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='209' cy='209' r='209' fill='%23222838' fill-opacity='0.1'/%3E%3C/svg%3E%0A");
+      }
+}
+
+/* FOOTER */
+
+.footer {
+  .book-demo {
+    @apply absolute right-0;
+  }
+}
+
 /* TYPOGRAPHY UTLITY CLASS */
 
 .typo-h1 {
@@ -58,16 +77,6 @@ p {
 .typo-h5 {
   @apply text-headline-h5;
 }
-
-.circle {
-  @apply relative;
-    
-      &:before {
-          @apply hidden lg:block h-auto absolute lg:-left-4xl -z-[1];
-          content: url("data:image/svg+xml,%3Csvg width='418' height='418' viewBox='0 0 418 418' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='209' cy='209' r='209' fill='%23222838' fill-opacity='0.1'/%3E%3C/svg%3E%0A");
-      }
-}
-
 
 /* FORM STYLING */
 

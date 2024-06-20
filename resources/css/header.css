@@ -6,4 +6,15 @@
             }
         }
     }
+
+    #primary-menu {
+        .menu-item {
+            .sub-menu {
+                @apply absolute py-5 px-2 bg-darkBg border border-border mt-xs rounded-[12px] z-40;
+                li {
+                    @apply py-2;
+                }
+            }
+        }
+    }
 }

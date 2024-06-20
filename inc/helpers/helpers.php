@@ -60,6 +60,12 @@ if(!function_exists('enqueue_theme_genic_styles')) {
                 line-height:24px!important;
                 background: $primary_color !important;
             }
+            .btn-bg {
+                background: $primary_color !important;
+            }
+            .btn-bg:hover {
+                background: $secondary_color !important;
+            }
             .btn-primary:hover {
                 background: $secondary_color !important;
             }

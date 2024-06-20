@@ -102,6 +102,10 @@
     margin-top: 20px;
     margin-bottom: 20px
 }
+.mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem
+}
 .mb-1 {
     margin-bottom: 0.25rem
 }
@@ -128,6 +132,12 @@
 }
 .mt-4 {
     margin-top: 1rem
+}
+.mb-xs {
+    margin-bottom: 20px
+}
+.mt-xs {
+    margin-top: 20px
 }
 .block {
     display: block
@@ -337,6 +347,9 @@
 .border-transparent {
     border-color: transparent
 }
+.border-lightBlue {
+    border-color: rgba(147, 157, 184, 0.1)
+}
 .bg-\[\#121826\] {
     --tw-bg-opacity: 1;
     background-color: rgb(18 24 38 / var(--tw-bg-opacity))
@@ -373,6 +386,10 @@
 .bg-primaryBlue {
     --tw-bg-opacity: 1;
     background-color: rgb(58 123 213 / var(--tw-bg-opacity))
+}
+.bg-border {
+    --tw-bg-opacity: 1;
+    background-color: rgb(47 54 71 / var(--tw-bg-opacity))
 }
 .object-cover {
     -o-object-fit: cover;
@@ -460,6 +477,10 @@
 .px-xs {
     padding-left: 20px;
     padding-right: 20px
+}
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem
 }
 .pb-2 {
     padding-bottom: 0.5rem
@@ -672,6 +693,10 @@ body {
 .wp-block[data-align=full] {
     max-width: 100%
 }
+.first\:mx-0:first-child {
+    margin-left: 0px;
+    margin-right: 0px
+}
 .first\:ml-0:first-child {
     margin-left: 0px
 }
@@ -740,6 +765,9 @@ body {
     }
     .md\:my-md {
         margin-top: 40px;
+        margin-bottom: 40px
+    }
+    .md\:mb-md {
         margin-bottom: 40px
     }
     .md\:block {

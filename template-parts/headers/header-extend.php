@@ -84,7 +84,7 @@
 						$button = get_sub_field('button');
 						$index = get_row_index();
 					?>
-						<a href="<?= $button['url']; ?>" class="px-5 py-2 transition-all duration-300 text-small <?= $index === 2 ? 'bg-lightBlue text-white font-medium rounded-[12px]' : '' ?>"><?= $button['title']; ?></a>
+						<a href="<?= $button['url']; ?>" class="px-5 py-2 transition-all duration-300 text-small <?= $index === 2 ? 'btn-bg text-white font-medium rounded-[12px]' : '' ?>"><?= $button['title']; ?></a>
 					<?php endwhile; wp_reset_postdata(); ?>
 					</div>
 				<?php endif; ?>

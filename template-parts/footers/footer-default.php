@@ -15,6 +15,20 @@
 
 <footer id="colophon" class="footer" role="contentinfo">
   <div class="max-w-screen-xl px-4 mx-auto">
+    <div class="relative items-center justify-between hidden py-4 border-b lg:flex border-lightBlue mb-xs md:mb-md">
+      <?php
+          wp_nav_menu(
+            array(
+              'menu'            => 'footer-above',
+              'container_id'    => 'footer-above',
+              'container_class' => 'bg-gray-100 mt-0 p-0 bg-transparent block',
+              'menu_class'      => 'flex',
+              'li_class'        => 'mx-5 text-xs',
+              'fallback_cb'     => false,
+              )
+          );
+      ?>
+    </div>
     <div class="sm:flex sm:flex-wrap md:py-4">
       <div class="mt-4 sm:w-1/2 xl:w-1/6 xl:mx-auto xl:mt-0 xl:!ml-0">
         <?php if($footer_logo) { 
@@ -74,9 +88,18 @@
         <p class="text-xs"><?php echo $copyright_text; ?></p>
       </div>
       <div class="flex w-full md:items-end md:justify-end md:w-2/3">
-        <ul>
-            <li>aaa</li>
-        </ul>
+        <?php
+          wp_nav_menu(
+            array(
+              'menu'            => 'copyright',
+              'container_id'    => 'copyright',
+              'container_class' => 'bg-gray-100 mt-0 p-0 bg-transparent block',
+              'menu_class'      => 'flex',
+              'li_class'        => 'first:mx-0 mx-4 text-xs',
+              'fallback_cb'     => false,
+              )
+          );
+        ?>
       </div>
     </div>
 
