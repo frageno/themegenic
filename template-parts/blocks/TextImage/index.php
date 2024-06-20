@@ -34,7 +34,7 @@ $headline_classes = 'text-white font-bold z-10 typo-' . $headline_tag_selector;
                     <?php echo wp_get_attachment_image( $image['ID'], 'large', false, array('class' => 'object-cover mx-auto rounded-[12px]') ); ?>
                 </div>
             <?php endif; ?>
-            <div class="flex flex-col w-full gap-6 <?= $image_side === 'bottom' ? 'justify-center items-center text-image__content' : 'justify-start' ?> <?= $image_side != 'bottom' ? 'md:w-1/2' : 'md:max-w-[760px]' ?>">
+            <div class="flex flex-col w-full gap-6 <?= $image_side === 'bottom' ? 'justify-center items-center circle' : 'justify-start' ?> <?= $image_side != 'bottom' ? 'md:w-1/2' : 'md:max-w-[760px]' ?>">
                 <?php if($headline) { create_headline($headline, $headline_classes, $headline_tag_selector); } ?>
                 <?php if($description) { ?> <?php echo $description; ?> <?php } ?>
                 <?php if(isset($button['url']) && isset($button['title'])) { ?>

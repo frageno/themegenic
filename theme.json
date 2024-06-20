@@ -33,6 +33,11 @@
           "color": "rgba(147, 157, 184, 0.1)"
         },
         {
+          "name": "Secondary Blue",
+          "slug": "secondaryBlue",
+          "color": "rgba(58, 121, 207, 1)"
+        },
+        {
           "name": "Dark Bg",
           "slug": "darkBg",
           "color": "rgba(34, 40, 56, 1)"

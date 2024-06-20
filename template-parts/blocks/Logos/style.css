@@ -1,0 +1,12 @@
+.logos {
+    &__item {
+        img {
+            @apply transition-all duration-300;
+        }
+        &:hover {
+            img {
+                filter: invert(1) brightness(4);
+            }
+        }
+    }
+}

@@ -48,7 +48,7 @@ p {
 }
 
 .typo-h3 {
-  @apply lg:text-headline-h3;
+  @apply text-headline-h3;
 }
 
 .typo-h4 {
@@ -59,4 +59,39 @@ p {
   @apply text-headline-h5;
 }
 
+.circle {
+  @apply relative;
+    
+      &:before {
+          @apply hidden lg:block h-auto absolute lg:-left-4xl -z-[1];
+          content: url("data:image/svg+xml,%3Csvg width='418' height='418' viewBox='0 0 418 418' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='209' cy='209' r='209' fill='%23222838' fill-opacity='0.1'/%3E%3C/svg%3E%0A");
+      }
+}
+
+
+/* FORM STYLING */
+
+.form-group {
+  @apply px-xs flex flex-col md:flex-row gap-3;
+}
+
+.form-col {
+  @apply w-full;
+}
+
+.form-col input {
+  @apply p-4 bg-darkBg border border-border text-small rounded-[12px] focus:outline-none transition-all duration-300;
+}
+
+.form-col .form-submit input {
+  @apply w-full md:w-[144px] bg-primaryBlue cursor-pointer hover:bg-darkBg outline-none hover:border-darkBg text-white font-bold border-primaryBlue;
+}
+
+.wpcf7-spinner {
+  @apply absolute;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+  border-color: #dc3232;
+}
 
