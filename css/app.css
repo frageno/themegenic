@@ -504,6 +504,10 @@ video {
 
   .container{
     max-width: 1920px;}}
+.visible{
+  visibility: visible;}
+.invisible{
+  visibility: hidden;}
 .fixed{
   position: fixed;}
 .absolute{
@@ -518,6 +522,8 @@ video {
   top: 0px;}
 .top-1\/2{
   top: 50%;}
+.top-full{
+  top: 100%;}
 .-z-\[1\]{
   z-index: -1;}
 .z-0{
@@ -569,8 +575,6 @@ video {
   margin-top: 6rem;}
 .mt-4{
   margin-top: 1rem;}
-.mt-xs{
-  margin-top: 20px;}
 .block{
   display: block;}
 .inline-block{
@@ -600,6 +604,8 @@ video {
   width: fit-content;}
 .w-full{
   width: 100%;}
+.min-w-\[200px\]{
+  min-width: 200px;}
 .max-w-\[470px\]{
   max-width: 470px;}
 .max-w-screen-lg{
@@ -804,6 +810,9 @@ video {
 .py-sm{
   padding-top: 30px;
   padding-bottom: 30px;}
+.py-xxs{
+  padding-top: 10px;
+  padding-bottom: 10px;}
 .pb-2{
   padding-bottom: 0.5rem;}
 .pt-2{
@@ -1111,22 +1120,35 @@ p{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;}
+.header #primary-menu .menu-item{
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;}
 .header #primary-menu .menu-item .sub-menu{
   position: absolute;
+  top: 100%;
   z-index: 40;
-  margin-top: 20px;
   border-radius: 12px;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(47 54 71 / var(--tw-border-opacity));
   background-color: rgba(34, 40, 56, 1);
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   padding-left: 0.5rem;
-  padding-right: 0.5rem;}
+  padding-right: 0.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  min-width: 200px;}
 .header #primary-menu .menu-item .sub-menu li{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;}
+.header #primary-menu .menu-item:hover > .sub-menu{
+  visibility: visible;
+  opacity: 1;}
 .footer {
 }
 .btn-primary{

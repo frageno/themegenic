@@ -9,10 +9,22 @@
 
     #primary-menu {
         .menu-item {
+            @apply py-xxs relative; 
+            
             .sub-menu {
-                @apply absolute py-5 px-2 bg-darkBg border border-border mt-xs rounded-[12px] z-40;
+                @apply absolute top-full py-4 px-2 bg-darkBg border border-border rounded-[12px] z-40;
+                @apply invisible opacity-0; 
+                @apply transition-all duration-300; 
+                @apply min-w-[200px];
+
                 li {
                     @apply py-2;
+                }
+            }
+
+            &:hover {
+                > .sub-menu {
+                    @apply visible opacity-100;
                 }
             }
         }
