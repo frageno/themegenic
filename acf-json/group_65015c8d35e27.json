@@ -450,8 +450,11 @@
             },
             "choices": {
                 "Footer menu 1": "Footer menu 1",
+                "Footer menu 2": "Footer menu 2",
+                "Footer menu 3": "Footer menu 3",
+                "Footer menu 4": "Footer menu 4",
                 "Primary Menu": "Primary Menu",
-                "Topbar": "Topbar"
+                "Topbar Menu": "Topbar Menu"
             },
             "default_value": "primary-menu",
             "return_format": "value",
@@ -551,6 +554,78 @@
             ]
         },
         {
+            "key": "field_6582cbae997b7",
+            "label": "Styling Options",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6582d4dd24d86",
+            "label": "Header Background Color",
+            "name": "header_background_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_666af3573f25c",
+            "label": "Header Text Hover Color",
+            "name": "header_text_hover_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6582d4fa24d87",
+            "label": "Header Text Color",
+            "name": "header_text_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_6582f95e5777a",
             "label": "Topbar Options",
             "name": "",
@@ -600,8 +675,11 @@
             },
             "choices": {
                 "Footer menu 1": "Footer menu 1",
+                "Footer menu 2": "Footer menu 2",
+                "Footer menu 3": "Footer menu 3",
+                "Footer menu 4": "Footer menu 4",
                 "Primary Menu": "Primary Menu",
-                "Topbar": "Topbar"
+                "Topbar Menu": "Topbar Menu"
             },
             "default_value": false,
             "return_format": "value",
@@ -742,78 +820,6 @@
             "return_format": "string"
         },
         {
-            "key": "field_6582cbae997b7",
-            "label": "Styling Options",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_6582d4dd24d86",
-            "label": "Header Background Color",
-            "name": "header_background_color",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_6582d4fa24d87",
-            "label": "Header Text Color",
-            "name": "header_text_color",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_666af3573f25c",
-            "label": "Header Text Hover Color",
-            "name": "header_text_hover_color",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
             "key": "field_650af893f5acb",
             "label": "Footer",
             "name": "",
@@ -950,8 +956,11 @@
                     },
                     "choices": {
                         "Footer menu 1": "Footer menu 1",
+                        "Footer menu 2": "Footer menu 2",
+                        "Footer menu 3": "Footer menu 3",
+                        "Footer menu 4": "Footer menu 4",
                         "Primary Menu": "Primary Menu",
-                        "Topbar": "Topbar"
+                        "Topbar Menu": "Topbar Menu"
                     },
                     "default_value": "primary-menu",
                     "return_format": "value",
@@ -1424,5 +1433,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718357605
+    "modified": 1743521966
 }

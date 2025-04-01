@@ -11,6 +11,24 @@
         .menu-item {
             @apply py-xxs relative; 
             
+            &.menu-item-has-children {
+                > a {
+                    @apply pr-5 relative;
+                    
+                    &:after {
+                        content: '';
+                        @apply absolute right-0 top-[40%] -translate-y-1/2;
+                        @apply w-2 h-2;
+                        @apply border-r-2 border-b-2 border-current;
+                        @apply rotate-45 transition-transform duration-300;
+                    }
+                }
+
+                &:hover > a:after {
+                    @apply rotate-[225deg] translate-y-0;
+                }
+            }
+            
             .sub-menu {
                 @apply absolute top-full py-4 px-2 bg-darkBg border border-border rounded-[12px] z-40;
                 @apply invisible opacity-0; 

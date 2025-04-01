@@ -23,7 +23,7 @@
               'container_id'    => 'footer-above',
               'container_class' => 'bg-gray-100 mt-0 p-0 bg-transparent block',
               'menu_class'      => 'flex',
-              'li_class'        => 'mx-5 text-xs',
+              'li_class'        => 'mx-5 text-xs hover:text-white tranistion-all duration-300',
               'fallback_cb'     => false,
               )
           );
@@ -82,10 +82,10 @@
             <?php } ?>
     </div>
 </div>
-<div class="copyright w-ful bg-[#222838] border-t border-[#939DB810] px-4 py-4">
-    <div class="flex flex-wrap items-center justify-center max-w-screen-xl mx-auto md:justify-between">
+<div class="copyright w-ful bg-[#222838] border-t border-[#939DB810]">
+    <div class="max-w-screen-xl flex flex-col-reverse md:flex-row gap-4 md:gap-0 flex-wrap items-center justify-center mx-auto px-4 py-4 md:justify-between">
       <div class="w-full md:w-1/3">
-        <p class="text-xs"><?php echo $copyright_text; ?></p>
+        <p class="text-xs text-center md:text-left"><?php echo $copyright_text; ?></p>
       </div>
       <div class="flex w-full md:items-end md:justify-end md:w-2/3">
         <?php
@@ -94,8 +94,8 @@
               'menu'            => 'copyright',
               'container_id'    => 'copyright',
               'container_class' => 'bg-gray-100 mt-0 p-0 bg-transparent block',
-              'menu_class'      => 'flex',
-              'li_class'        => 'first:mx-0 mx-4 text-xs',
+              'menu_class'      => 'flex flex-col md:flex-row gap-2 md:gap-0',
+              'li_class'        => 'md:first:mx-0 md:mx-4 text-xs',
               'fallback_cb'     => false,
               )
           );
